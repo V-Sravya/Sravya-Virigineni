@@ -1,0 +1,195 @@
+/* Basic styles */
+body {
+  font-family: 'Playfair Display', serif;
+  margin: 0;
+  line-height: 1.6;
+  font-size: 20px;
+}
+
+section {
+  padding-left: 35px;
+  padding-bottom: 60px;
+}
+
+.main-header {
+  font-size: 100px;
+  padding-left: 15px;
+}
+
+.header-icon {
+  width: 35px;
+  height: 35px;
+  vertical-align: middle;
+  margin-right: 10px;
+  padding-bottom: 10px;
+}
+
+.section-link {
+  padding-left: 35px;
+  padding-top: 20px;
+}
+
+a {
+  padding-right: 10px;
+  text-decoration: none;
+  color: #000000;
+  font-style: oblique;
+}
+
+h1, h2, h3, h4, h5, h6, h7, h8 {
+  font-size: 30px;
+  text-transform: none;
+  font-weight: 300;
+  margin-bottom: 0px;
+}
+
+.li {
+  padding-bottom: 8px;
+}
+
+.projects-name {
+  font-size: 20px;
+  font-weight: 200px;
+  font-style: bold;
+  margin-bottom: 0px;
+}
+
+.social-link {
+  margin-bottom: -40px;
+}
+
+.social-heading {
+  font-size: 25px;
+  margin-top: 20px;
+  margin-bottom: -25px;
+}
+
+footer {
+  font-size: 15px;
+  text-align: center;
+}
+
+.header-icon:hover {
+  transform: scale(1.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Theme button */
+.theme-button {
+  background-color: #2c2b2b;
+  color: #f0f0f0;
+  padding: 8px;
+  border-radius: 10px;
+  border: none;
+  margin-left: 35px;
+  font-family: "Lucida Calligraphy";
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+body.dark-theme .theme-button {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* Dark Theme */
+body.dark-theme {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+}
+
+body.dark-theme a {
+  color: #12f3a1;
+}
+
+body.dark-theme footer {
+  background-color: #121212;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 10px;
+  padding-top: 1px;
+  padding-bottom: 2px;
+}
+
+/* Animation for smooth reveal */
+.animate-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.animate-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  body {
+    font-size: 18px; /* Smaller font size for mobile */
+  }
+
+  .main-header {
+    font-size: 50px; /* Adjust the size of the header */
+    padding-left: 10px;
+  }
+
+  .section-link {
+    padding-left: 15px;
+    padding-top: 10px;
+  }
+
+  h1, h2, h3, h4, h5, h6, h7, h8 {
+    font-size: 25px; /* Adjust heading sizes */
+  }
+
+  .header-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  footer {
+    font-size: 14px; /* Slightly smaller footer text */
+    padding: 10px; /* Add padding to footer */
+  }
+
+  .theme-button {
+    margin-left: 15px; /* Reduce margin for mobile */
+    font-size: 16px; /* Adjust font size for theme button */
+    padding: 5px; /* Reduce padding for mobile */
+  }
+
+  /* Adjust the layout of the content */
+  section {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .projects-name {
+    font-size: 18px;
+  }
+
+  .social-heading {
+    font-size: 20px;
+  }
+
+  .social-link {
+    margin-bottom: 20px;
+  }
+}
+
+/* Extra small screens (mobile portrait) */
+@media (max-width: 480px) {
+  .main-header {
+    font-size: 35px; /* Smaller main header for smaller screens */
+  }
+
+  h1, h2, h3, h4, h5, h6, h7, h8 {
+    font-size: 20px; /* Reduce heading size on small screens */
+  }
+
+  .theme-button {
+    font-size: 14px; /* Even smaller font size for theme button */
+    padding: 4px; /* Adjust padding */
+  }
+}
