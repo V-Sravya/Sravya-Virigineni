@@ -4,6 +4,16 @@ body {
   margin: 0;
   line-height: 1.6;
   font-size: 20px;
+  background: linear-gradient(135deg, #0B0C10, #1F2833, #66FCF1, #45A29E);
+  background-size: 400% 400%;
+  color: #c5c6c7; /* Neutral color for text */
+}
+
+/* Gradient animation */
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 section {
@@ -14,6 +24,7 @@ section {
 .main-header {
   font-size: 100px;
   padding-left: 15px;
+  color: #66FCF1; /* Bright highlight for main header */
 }
 
 .header-icon {
@@ -32,8 +43,13 @@ section {
 a {
   padding-right: 10px;
   text-decoration: none;
-  color: #2790c5;
+  color: #6d93d6;
   font-style: oblique;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #45A29E; /* Subtle hover effect */
 }
 
 h1, h2, h3, h4, h5, h6, h7, h8 {
@@ -41,6 +57,7 @@ h1, h2, h3, h4, h5, h6, h7, h8 {
   text-transform: none;
   font-weight: 300;
   margin-bottom: 0px;
+  color: #eded24;
 }
 
 .li {
@@ -49,9 +66,15 @@ h1, h2, h3, h4, h5, h6, h7, h8 {
 
 .projects-name {
   font-size: 20px;
-  font-weight: 200px;
-  font-style: bold;
+  font-weight: bold;
   margin-bottom: 0px;
+  color: aliceblue;
+}
+
+.project-sub {
+  font-size: 25px;
+  margin-top: 20px;
+  margin-bottom: -25px;
 }
 
 .social-link {
@@ -62,53 +85,18 @@ h1, h2, h3, h4, h5, h6, h7, h8 {
   font-size: 25px;
   margin-top: 20px;
   margin-bottom: -25px;
+  color: #eded24; /* Highlight color for section headings */
 }
 
 footer {
   font-size: 15px;
   text-align: center;
+  color: #c5c6c7;
 }
 
 .header-icon:hover {
   transform: scale(1.1);
   transition: transform 0.2s ease-in-out;
-}
-
-/* Theme button */
-.theme-button {
-  background-color: #2c2b2b;
-  color: #f0f0f0;
-  padding: 8px;
-  border-radius: 10px;
-  border: none;
-  margin-left: 35px;
-  font-family: "Lucida Calligraphy";
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-body.dark-theme .theme-button {
-  background-color: #ffffff;
-  color: #000000;
-}
-
-/* Dark Theme */
-body.dark-theme {
-  background-color: #1e1e1e;
-  color: #f0f0f0;
-}
-
-body.dark-theme a {
-  color: #12f3a1;
-}
-
-body.dark-theme footer {
-  background-color: #121212;
-  color: #ffffff;
-  text-align: center;
-  margin-top: 10px;
-  padding-top: 1px;
-  padding-bottom: 2px;
 }
 
 /* Animation for smooth reveal */
@@ -166,7 +154,7 @@ body.dark-theme footer {
   }
 
   .projects-name {
-    font-size: 18px;
+    font-size: 20px;
   }
 
   .social-heading {
@@ -186,10 +174,5 @@ body.dark-theme footer {
 
   h1, h2, h3, h4, h5, h6, h7, h8 {
     font-size: 20px; /* Reduce heading size on small screens */
-  }
-
-  .theme-button {
-    font-size: 14px; /* Even smaller font size for theme button */
-    padding: 4px; /* Adjust padding */
   }
 }
